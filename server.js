@@ -7,9 +7,10 @@ const port = 8080;
 
 app.use(express.json());
 
-// http://192.168.1.67:3000
-
-var whitelist = ["https://merry-bienenstitch-7db92b.netlify.app"];
+var whitelist = [
+  "https://merry-bienenstitch-7db92b.netlify.app",
+  "http://localhost:3000",
+];
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
